@@ -137,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
      /*---------------------- generic title -------------------------*/
     const title = document.querySelector('.generic-title');
 
-    // نستخدم Intersection Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
