@@ -134,4 +134,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     });
+     /*---------------------- generic title -------------------------*/
+    const title = document.querySelector('.generic-title');
+
+    // نستخدم Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                title.classList.add('active');
+                observer.unobserve(title);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(title);
+    /*------------ active partners------------------------*/
+    const items = document.querySelectorAll('.partners-logo .item');
+let currentIndex = 0;
+
+items[currentIndex].classList.add('active');
+
+setInterval(() => {
+  items[currentIndex].classList.remove('active');
+
+  currentIndex = (currentIndex + 1) % items.length;
+
+  items[currentIndex].classList.add('active');
+}, 4000); 
+
+
 });
+
