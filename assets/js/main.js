@@ -163,4 +163,45 @@ setInterval(() => {
 
 
 });
+ /*--------------------- aos----------------------*/
+function aos_init() {
+    AOS.init({
+        duration: 700,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+}
+window.addEventListener('load', () => {
+    aos_init();
+});
+ /*--------------------- Fancybox  ----------------------*/
+      Fancybox.bind('[data-fancybox]', {
+      });    
+      /*--------------------- swiper  ----------------------*/
+   $(function () {
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      speed: 700,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+   breakpoints: {
+  400: { slidesPerView: 1 },
+  560: { slidesPerView: 2 },
+  800: { slidesPerView: 3 },
+  1060: { slidesPerView: 4 },
 
+}
+
+    });
+
+    $('.swiper-container').on('mouseenter', () => swiper.autoplay.stop());
+    $('.swiper-container').on('mouseleave', () => swiper.autoplay.start());
+  });
