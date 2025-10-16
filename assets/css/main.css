@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
@@ -10,7 +10,7 @@
     --Dark-Gray:#808080;
     --white:#FFFFFF;
     --black:#000;
-    --Secondary-Darkest: #5A3F19;
+    --Primary-base: #8c5133;
     --nav-color: #F3F3F3;
     --nav-link: #7F7D7D;
     --side-nav: #242526;
@@ -1140,7 +1140,7 @@ line-height: 28px;
       position: relative;
     }
 
-    .choose-buccino .about-list::before {
+    /*.choose-buccino .about-list::before {
       content: "";
       position: absolute;
       right: 20px;
@@ -1148,39 +1148,93 @@ line-height: 28px;
       bottom: 16px;
       width: 2px;
       border-right: 2px dashed #d7a678;
-    }
+    }*/
 
     .choose-buccino .about-item {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 40px;
+      margin-bottom: 64px;
       position: relative;
     }
 
-   .choose-buccino .about-icon {
-      background: #fff;
-      color: #8c3c1e;
-      border: 2px solid #d7a678;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 15px;
-      flex-shrink: 0;
-      z-index: 2;
+.choose-buccino .about-icon {
+    background: var(--base);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+}
+
+    .choose-buccino .about-icon i {
+        color: var(--white);
     }
 
-        .choose-buccino .about-content h4 {
-            margin: 0;
-            color: var(--base);
-            text-align: right;
-            font-family: var(--title-font-family);
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
+    .choose-buccino .about-icon::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 103px;
+    }
+
+.choose-buccino .about-item:nth-child(2) .about-icon {
+    background: var(--Primary-base) !important;
+}
+
+.choose-buccino .about-item:nth-child(4) .about-icon {
+    background: var(--Primary-base) !important;
+}
+
+.choose-buccino .about-item:nth-child(6) .about-icon {
+    background: var(--Primary-base) !important;
+}
+
+.choose-buccino .about-item:nth-child(1) .about-icon::after {
+    border-left: 2px dashed var(--base);
+}
+
+.choose-buccino .about-item:nth-child(3) .about-icon::after {
+    border-left: 2px dashed var(--base);
+}
+
+.choose-buccino .about-item:nth-child(5) .about-icon::after {
+    border-left: 2px dashed var(--base);
+}
+
+.choose-buccino .about-item:nth-child(2) .about-icon::after {
+    border-left: 2px dashed var(--Primary-base);
+}
+
+.choose-buccino .about-item:nth-child(4) .about-icon::after {
+    border-left: 2px dashed var(--Primary-base);
+}
+
+.choose-buccino .about-item:nth-child(6) .about-icon::after {
+    height: 0;
+    border: none;
+}
+/*.choose-buccino .about-icon:nth-child(2)::after {
+     border-left: 2px dashed var(--base);
+}*/
+
+
+    .choose-buccino .about-content h4 {
+        margin: 0;
+        color: var(--base);
+        text-align: right;
+        font-family: var(--title-font-family);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
     .choose-buccino .about-content p {
       margin: 5px 0 0;
       font-size: 14px;

@@ -204,4 +204,5 @@ window.addEventListener('load', () => {
 
     $('.swiper-container').on('mouseenter', () => swiper.autoplay.stop());
     $('.swiper-container').on('mouseleave', () => swiper.autoplay.start());
-  });
+   });
+
