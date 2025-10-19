@@ -6,6 +6,7 @@
 :root {
     --base: #C98B38;
     --base-2: #BC9A89;
+    --Secondary-Darkest: #5A3F19;
     --gray: #818181;
     --Dark-Gray: #808080;
     --white: #FFFFFF;
@@ -14,22 +15,18 @@
     --body-font-family: "Playfair Display", serif;
     --title-font-family: "DM Sans", sans-serif;
     /* Paragraphs */
-    --p-size-0: clamp(1rem, 2vw, 1rem);
-    --p-small-size: clamp(.80rem, 2vw, .87rem);
-    --btn-size: clamp(1.1rem, 2vw, 1.2rem);
-    --p-size: clamp(0.92rem, 2vw, 1.1rem);
-    --p-size-2: clamp(1rem, 2vw, 1.6rem);
-    --p-sup-title: clamp(.86rem, 1vw, 1.25rem);
-    --header: clamp(.86rem, 1vw, 1.25rem);
+    --btn-size: clamp(1.2rem, 2vw, 1.3rem);
+    --p-size: clamp(1.1rem, 3.5vw, 1.25rem);
     /* Headings */
-    --h1-title: clamp(2rem, 5vw, rem);
-    --h1-size: clamp(2rem, 5vw, 3rem);
+    --title: clamp(1.2rem, 3.7vw, 1.5rem);
+    --sup-title: clamp(1.875rem, 3vw, 2rem);
+    --h1-size: clamp(2rem, 5vw, 3.9rem);
     --h2-size: clamp(1.75rem, 4vw, 2.5rem);
     --h3-size: clamp(1.5rem, 3vw, 2.25rem);
     --h4-size: clamp(1.25rem, 2.5vw, 1.75rem);
     --h5-size: clamp(1.1rem, 2vw, 1.3rem);
     --h6-size: clamp(1rem, 1.5vw, 1.25rem);
-    --header: clamp(.86rem, 2vw, 1rem);
+    /*  --header: clamp(.86rem, 2vw, 1rem);*/
 }
 
 /*--------------------------------------------------------------
@@ -42,14 +39,17 @@
 }
 
 .generic-title {
-    font-size: var(--p-small-size);
+    font-size: var(--title);
     font-weight: 700;
     color: var(--base);
     margin: 0;
     position: relative;
+    padding-bottom: 8px;
+    border-block-end: 2px solid var(--base);
+    display: inline-block;
 }
 
-    .generic-title::after {
+    /*   .generic-title::after {
         content: "";
         position: absolute;
         bottom: -4px;
@@ -63,10 +63,12 @@
 
     .generic-title.active::after {
         width: 100%;
-    }
+    }*/
 
     .generic-title .generic-title-icon {
         padding-left: 5px;
+        width: 30px;
+        height: 30px;
     }
 
 .btn-custom {
@@ -351,13 +353,16 @@ body .findout-section {
         display: none;
     }
 }
+
 @media (max-width: 400px) {
     .header.sticked {
         padding: 12px 0px 12px 12px;
     }
+
     .navbar {
         max-width: 300px !important;
     }
+
     .mobile-nav-hide {
         right: 265px !important;
     }
@@ -505,16 +510,23 @@ body .findout-section {
 # findout-info
 --------------------------------------------------------------*/
 .findout-info .title {
-    text-align: center;
-    font-family: var(--title-font-family);
+    font-size: var(--title);
+    font-weight: 700;
     color: var(--base);
-    border-bottom: 1px solid var(--base);
-    width: 150px;
-    font-size: var(--p-size);
+    margin: 0;
+    position: relative;
+    padding-bottom: 8px;
+    border-block-end: 2px solid var(--base);
+    display: inline-block;
+}
+.findout-info h2 {
+    color: var(--black);
+    text-align: right;
+    font-family: var(--title-font-family);
+    font-size: var(--sup-title);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
-    padding-bottom: 5px;
 }
 
 .findout-info h3 {
@@ -523,7 +535,7 @@ body .findout-section {
     margin-bottom: 0px;
     border-radius: 6px;
     font-family: var(--title-font-family);
-    font-size: var(--h3-size);
+    font-size: var(--h1-size);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -538,20 +550,23 @@ body .findout-section {
     justify-content: space-between;
 }
 
-    .features span {
-        color: var(--Secondary-Darkest);
-        text-align: right;
-        font-family: var(--title-font-family);
-        font-size: var(--p-size);
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+    .features .feature-item {
         display: flex;
         gap: 10px;
         align-items: center;
     }
 
-        .features span .image {
+        .features .feature-item span {
+            color: var(--Secondary-Darkest);
+            text-align: right;
+            font-family: var(--title-font-family);
+            font-size: var(--h5-size);
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+        }
+
+        .features .feature-item .image {
             width: 40px;
             height: 40px;
             background-color: var(--base);
@@ -563,10 +578,10 @@ body .findout-section {
             transition: 0.3s;
         }
 
-            .features span .image :hover {
-                background-color: #a8641e;
-                transform: scale(1.1);
-            }
+    .features span .image :hover {
+        background-color: #a8641e;
+        transform: scale(1.1);
+    }
 
 .clients-group {
     display: flex;
@@ -598,7 +613,7 @@ body .findout-section {
     font-family: var(--title-font-family);
     font-size: var(--p-size);
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
 }
 
@@ -632,7 +647,7 @@ body .findout-section {
             color: var(--black);
             text-align: center;
             font-family: var(--title-font-family);
-            font-size: var(--p-size-2);
+            font-size: var(--sup-title);
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -642,9 +657,9 @@ body .findout-section {
             color: var(--base);
             text-align: center;
             font-family: var(--title-font-family);
-            font-size: var(--p-size);
+            font-size: var(--title);
             font-style: normal;
-            font-weight: 600;
+            font-weight: 700;
             line-height: normal;
         }
 
@@ -721,41 +736,43 @@ body .findout-section {
         color: #1A1A1A;
         text-align: right;
         font-family: var(--title-font-family);
-        font-size: var(--h2-size);
+        font-size: var(--sup-title);
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         line-height: normal;
     }
 
-.product-card {
-    background: rgba(255, 255, 255, 0.65);
-    border-radius: 36px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 24px 49px 24px 24px;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
+.product-container {
+    display: grid;
+    gap: 32px;
 }
 
-    .product-card:nth-child(2n-0) {
-        flex-flow: row-reverse;
+    .product-container .product-card {
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 65px;
+        padding: 24px 49px 24px 24px;
     }
 
-.product-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 33px;
-    flex: 1;
-    width: 100%;
+        .product-container .product-card .product-content {
+            display: flex;
+            align-items: center;
+            gap: 33px;
+            flex-flow: row;
+        }
+
+.product-card:nth-child(2) .product-content {
+    flex-flow: row-reverse;
 }
 
-    .product-content:nth-child(2n-0) {
+@media (min-width: 992px) {
+    .product-card:nth-child(2) .product-content {
         flex-flow: row-reverse;
     }
+}
 
 .product-image {
     width: 100%;
@@ -775,16 +792,17 @@ body .findout-section {
 
 .product-title {
     font-family: var(--title-font-family);
-    font-weight: 500;
-    font-size: var(--h5-size);
+    font-weight: 700;
+    font-size: var(--title);
     color: var(--base);
 }
 
 .product-description {
     color: var(--Dark-Gray);
-    font-size: var(--p-size-0);
-    line-height: 28px;
+    font-size: var(--p-size);
     text-align: right;
+    font-family: var(--title-font-family);
+    font-weight:400;
 }
 
 .cta-btn {
@@ -802,12 +820,13 @@ body .findout-section {
     overflow: hidden;
     z-index: 1;
 }
+
     .cta-btn::before {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: 100px;
-        padding: 2px; 
+        padding: 2px;
         background: linear-gradient(90deg, var(--base), transparent, var(--base));
         background-size: 300% 300%;
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -831,10 +850,11 @@ body .findout-section {
     color: white;
     background: var(--base);
 }
-    .cta-btn:hover {
-        background: var(--base);
-        color: var(--white);
-    }
+
+.cta-btn:hover {
+    background: var(--base);
+    color: var(--white);
+}
 
 .arrow-btn {
     background: var(--base);
@@ -946,19 +966,20 @@ body .findout-section {
     position: relative;
 }
 
-    .challenges .challenges-title .sub-title {
-        color: #000;
-        text-align: center;
+    .challenges .sub-title {
+        color: var(--black);
         font-family: var(--title-font-family);
-        font-size: var(--p-size-2);
-        margin: auto;
+        font-size: var(--sup-title);
         font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+        font-weight: 700;
         padding: 20px 86px;
         border-radius: 12px;
         background: #FAF6F3;
         box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.10);
+        display: block; 
+        margin: 0 auto; 
+        text-align: center; 
+        width: fit-content; 
     }
 
     .challenges .challenges-container .challenges-group,
@@ -970,18 +991,18 @@ body .findout-section {
 
         .challenges .challenges-container .challenges-group span,
         .solutions-group span {
-            color: #000;
+            color: var(--black);
             font-family: var(--title-font-family);
-            font-size: var(--h4-size);
+            font-size: var(--sup-title);
             font-style: normal;
-            font-weight: 700;
+            font-weight: bold;
             line-height: normal;
             border-bottom: 2px solid var(--black);
         }
 
         .challenges .challenges-container .challenges-group .challenges-box,
         .solutions-box {
-            gap: 25px;
+            gap: 18px;
         }
 
             .challenges .challenges-container .challenges-group .challenges-box h2,
@@ -989,9 +1010,9 @@ body .findout-section {
                 color: var(--base);
                 text-align: right;
                 font-family: var(--title-font-family);
-                font-size: var(--p-size);
+                font-size: var(--title);
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: normal;
             }
 
@@ -1010,11 +1031,10 @@ body .findout-section {
             color: var(--Dark-Gray);
             text-align: right;
             font-family: var(--title-font-family);
-            font-size: var(--p-small-size);
+            font-size: var(--p-size);
             font-style: normal;
             font-weight: 400;
-            line-height: 28px;
-            padding: 20px 0;
+            padding: 10px 0;
         }
 
         .challenges .challenges-container .challenges-group .challenges-item:nth-child(2n) {
@@ -1027,13 +1047,10 @@ body .findout-section {
 
     .challenges .challenges-container .challenges-image img {
         width: 100%;
-        height: 90vh;
+        height:100vh;
     }
-@media (min-width: 769px) and (max-width: 1024px) {
-    .challenges .challenges-container .challenges-image img {
-        height: 50vh;
-    }
-}
+
+
 @media (max-width: 678px) {
     .challenges .challenges-container .challenges-image img {
         height: clamp(250px, 50vw, 400px);
@@ -1063,18 +1080,17 @@ body .findout-section {
         color: #1A1A1A;
         text-align: right;
         font-family: var(--title-font-family);
-        font-size: var(--p-size-2);
+        font-size: var(--sup-title);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
     }
 
     .exhibition-title-group p {
-        padding: 10px 0;
         color: var(--Dark-Gray);
         text-align: right;
         font-family: var(--title-font-family);
-        font-size: var(--p-small-size);
+        font-size: var(--p-size);
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
@@ -1082,7 +1098,7 @@ body .findout-section {
 
     .exhibition-title-group .btn-exhibition {
         display: flex;
-        height: 50px;
+        height: 60px;
         align-items: center;
         gap: 12px;
         flex-shrink: 0;
@@ -1091,7 +1107,7 @@ body .findout-section {
         text-decoration: none;
         transition: 0.3s;
         color: #FFF;
-        font-size: var(--p-small-size);
+        font-size: var(--btn-size);
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -1106,13 +1122,13 @@ body .findout-section {
             width: 30px;
             height: 30px;
             display: grid;
-            align-items: anchor-center;
+            align-items: center;
         }
 
         .exhibition-title-group .btn-exhibition:hover {
-            background-color: var(--base-2);
-            color: var(--white);
-            border: 1px solid var(--base-2);
+            background-color:transparent;
+            color: var(--base);
+            border: 1px solid var(--base);
         }
 
 /*-----------------*/
@@ -1187,7 +1203,14 @@ body .findout-section {
         -o-transition: ease 0.5s;
         transition: ease 0.5s;
     }
-
+.exhibition .swiper-pagination {
+    background-color: var(--white);
+    position:relative;
+    margin-top:80px;
+    bottom:0 !important;
+    padding:20px 0 !important;
+    display:block;
+}
 .exhibition .swiper-pagination .swiper-pagination-bullet {
     width: 18px;
     height: 18px;
@@ -1213,6 +1236,10 @@ body .findout-section {
     .exhibition-title-group .btn-exhibition {
         margin: auto;
     }
+    .exhibition-title-group {
+        padding-bottom:50px !important;
+    }
+
 }
 
 @media (max-width: 661px) {
@@ -1220,6 +1247,10 @@ body .findout-section {
         width: 84%;
         display: inline-block;
     }
+    .exhibition-title-group {
+        padding-bottom: 7px !important;
+    }
+
 
     .exhibition .swiper-slide {
         padding-left: 0;
@@ -1237,11 +1268,10 @@ body .findout-section {
 
 .challenges,
 .choose-buccino-title .sub-title {
-    color: #000;
-    text-align: center;
+    color: var(--black);
+    text-align: right;
     font-family: var(--title-font-family);
-    font-size: var(--p-size-2);
-    margin: auto;
+    font-size: var(--sup-title);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1251,10 +1281,9 @@ body .findout-section {
     color: #777;
     text-align: center;
     font-family: var(--title-font-family);
-    font-size: var(--p-small-size);
+    font-size: var(--p-size);
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
 }
 
 .choose-buccino .about-list {
@@ -1337,17 +1366,20 @@ body .findout-section {
     color: var(--base);
     text-align: right;
     font-family: var(--title-font-family);
-    font-size: var(--p-size);
+    font-size: var(--title);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
 }
 
 .choose-buccino .about-content p {
     margin: 5px 0 0;
-    font-size: var(--p-small-size);
+    font-size: var(--p-size);
+    font-weight: 400;
     color: #555;
-    line-height: 1.6;
+    text-align: right;
+    font-family: var(--title-font-family);
+    font-style: normal;
 }
 
 @media (max-width: 900px) {
@@ -1446,13 +1478,12 @@ body .findout-section {
             }
 
         .choose-buccino .about-box .about-container p {
-            font-size: var(--p-small-size);
+            font-size: var(--p-size);
             text-align: center;
             font-family: var(--title-font-family);
             font-style: normal;
             font-weight: 400;
-            line-height: 25px;
-            align-self: stretch;
+            font-style:normal;
         }
 
     .choose-buccino .about-box a {
@@ -1595,11 +1626,11 @@ whats app  and client-opinion
     .testimonial-content {
         padding-right: 0px;
     }
+
     .client-opinion .swiper-button-next,
-    .client-opinion .swiper-button-prev{
+    .client-opinion .swiper-button-prev {
         display: none;
     }
-
 }
 /*---------------------------------------------------------
 contact us
@@ -1613,7 +1644,7 @@ contact us
 
     .contact-us .contact-info {
         position: relative;
-        height: 450px;
+        height: 500px;
         width: 100%;
         background-image: url(../images/contact-info-bg.jpg);
         background-size: cover;
@@ -1648,7 +1679,7 @@ contact us
         .contact-us .contact-info .contact-address h2 {
             color: var(--white);
             text-align: right;
-            font-family: "Playfair Display";
+            font-family:var(--title-font-family);
             font-size: var(--h5-size);
             font-style: normal;
             font-weight: 700;
@@ -1678,7 +1709,7 @@ contact us
         right: 15px;
         top: 0;
         right: 0px;
-        border-top: 450px solid var(--white);
+        border-top: 500px solid var(--white);
         border-left: 125px solid transparent;
         z-index: 2;
     }
