@@ -253,3 +253,28 @@ jQuery('.progress-wrap').on('click', function (event) {
     jQuery('html, body').animate({ scrollTop: 0 }, duration);
     return false;
 })
+/*----------------------------------------
+typing-title
+-----------------------------------------*/
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "أفضل مكاتب التصميم والديكور في الكويت يثقون بنا";
+            const target = document.getElementById("typing-word");
+            let index = 0;
+
+            function typeNextChar() {
+                if (index < text.length) {
+                    target.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeNextChar, 150);
+                } else {
+                    setTimeout(() => {
+                        target.textContent = '';
+                        index = 0;
+                        typeNextChar();
+                    }, 5000);
+                }
+            }
+
+            typeNextChar();
+        });
+    
