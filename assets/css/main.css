@@ -235,7 +235,7 @@ body .findout-section {
             padding: 0 3px;
             font-family: var(--title-font-family);
             color: var(--hover);
-            transition: 0.3s;
+            /*transition: 0.3s;*/
             position: relative;
             font-size: var(--p-size);
             font-style: normal;
@@ -259,7 +259,7 @@ body .findout-section {
             background-color: var(--base);
             visibility: hidden;
             width: 0px;
-            transition: all 0.3s ease-in-out 0s;
+            /*transition: all 0.3s ease-in-out 0s;*/
         }
 
         .navbar a:hover:before,
@@ -288,7 +288,7 @@ body .findout-section {
             visibility: hidden;
             background: #fff;
             box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-            transition: 0.3s;
+            /*transition: 0.3s;*/
             border-radius: 4px;
         }
 
@@ -377,7 +377,7 @@ body .findout-section {
         width: 100%;
         max-width: 400px;
         bottom: 0;
-        transition: 0.3s;
+        /*transition: 0.3s;*/
         z-index: 9997;
     }
 
@@ -392,7 +392,7 @@ body .findout-section {
         margin: 0;
         background: #FFF;
         overflow-x: auto;
-        transition: 0.3s;
+        /*transition: 0.3s;*/
         z-index: 9998;
     }
 
@@ -434,12 +434,12 @@ body .findout-section {
         padding: 8px 20px;
         border-radius: 4px;
         margin: 15px;
-        color: var(--date);
+        color: var(--base);
     }
 
         .navbar .getstarted:hover,
         .navbar .getstarted:focus:hover {
-            color: var(--date);
+            color: var(--base);
             background: rgba(0, 131, 116, 0.8);
         }
 
@@ -449,7 +449,7 @@ body .findout-section {
         display: none;
         padding: 10px 0;
         margin: 10px 20px;
-        transition: all 0.5s ease-in-out;
+        /*transition: all 0.5s ease-in-out;*/
         background-color: #007466;
         border: 1px solid #006459;
     }
@@ -464,7 +464,7 @@ body .findout-section {
         font-size: 28px;
         cursor: pointer;
         line-height: 0;
-        transition: 0.5s;
+        /*transition: 0.5s;*/
         z-index: 9999;
         margin-right: 10px;
     }
@@ -474,7 +474,7 @@ body .findout-section {
         font-size: 32px;
         cursor: pointer;
         line-height: 0;
-        transition: 0.5s;
+        /*transition: 0.5s;*/
         position: fixed;
         right: 350px;
         top: 20px;
@@ -498,11 +498,11 @@ body .findout-section {
             }
 }
 
-@media only screen and (max-width : 1300px) {
+/*@media only screen and (max-width : 1300px) {
     .header .container {
         flex-flow: row-reverse;
     }
-}
+}*/
 
 /*--------------------------------------------------------------
 # findout-info
@@ -1682,8 +1682,9 @@ contact us
     }
 
     .contact-us .contact-form {
+        padding-right: 80px;
+        padding-top:20px;
         background: rgba(0, 0, 0, 0);
-        padding:30px 80px 30px 0;
     }
 
     .contact-us .contact-info .contact-address {
