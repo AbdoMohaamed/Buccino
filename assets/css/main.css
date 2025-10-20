@@ -770,6 +770,7 @@ body .findout-section {
     .product-card:nth-child(2) .product-content {
         flex-flow: row-reverse;
     }
+   
 }
 
 .product-image {
@@ -938,6 +939,9 @@ body .findout-section {
     .cta-btn {
         margin: auto;
     }
+    .product-container .product-card {
+        padding: 24px 24px 24px 24px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1082,11 +1086,12 @@ body .findout-section {
         transform: translateY(0);
     }
 }
-/*@media (max-width: 678px) {
-    .challenges .challenges-container .challenges-image img {
-        height: clamp(250px, 50vw, 400px);
+@media (max-width: 768px) {
+    .challenges .sub-title {
+        padding: 20px 30px;
+        border-radius: 12px;
     }
-}*/
+}
 
 
 /*--------------------------------------------------------------
@@ -1259,10 +1264,8 @@ body .findout-section {
 
 @media (max-width: 960px) {
     .exhibition .swiper-container {
-        max-width: 960px;
-        width: 100%;
-        margin-top: -22px;
-        padding-top: 0;
+        width: 100% !important;
+        height: 100% !important;
     }
 
     .exhibition-title-group .btn-exhibition {
@@ -1271,22 +1274,14 @@ body .findout-section {
     .exhibition-title-group {
         padding-bottom:50px !important;
     }
-
+    .exhibition .swiper-slide {
+        padding-left: 75px !important;
+    }
 }
 
 @media (max-width: 661px) {
-    .swiper-slide_img {
-        width: 84%;
-        display: inline-block;
-    }
     .exhibition-title-group {
         padding-bottom: 7px !important;
-    }
-
-
-    .exhibition .swiper-slide {
-        padding-left: 0;
-        padding-right: 0;
     }
 }
 
@@ -1968,4 +1963,11 @@ contact us
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
+}
+/* typical phone screen resolution */
+@media only screen and (max-width : 768px) {
+    .footer {
+        padding: 15px;
+    }
+
 }
