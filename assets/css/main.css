@@ -627,7 +627,6 @@ body .findout-section {
 # Success partners
 --------------------------------------------------------------*/
 .success-partners {
-    height: 340px;
     padding: 32px 0px;
     background-image: url(../images/partners.jpg);
     background-size: cover;
