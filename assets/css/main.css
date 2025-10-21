@@ -1305,11 +1305,12 @@ body .findout-section {
 
 .choose-buccino-title p {
     color: #777;
-    text-align: center;
+    text-align: right;
     font-family: var(--title-font-family);
     font-size: var(--p-size);
     font-style: normal;
     font-weight: 400;
+
 }
 
 .choose-buccino .about-list {
@@ -1524,7 +1525,7 @@ body .findout-section {
 whats app  and client-opinion
 -----------------------------------------------------------*/
 .client-opinion {
-    padding: 60px 20px;
+    padding: 60px 0;
     background: var(--white);
     font-family: var(--title-font-family);
     background-image: url(../images/contact-us-bg.jpg);
@@ -1670,7 +1671,7 @@ contact us
 
     .contact-us .contact-info {
         position: relative;
-        height: 500px;
+        height: 510px;
         width: 100%;
         background-image: url(../images/contact-info-bg.jpg);
         background-size: cover;
@@ -1736,7 +1737,7 @@ contact us
         right: 15px;
         top: 0;
         right: 0px;
-        border-top: 500px solid var(--white);
+        border-top: 510px solid var(--white);
         border-left: 125px solid transparent;
         z-index: 2;
     }
