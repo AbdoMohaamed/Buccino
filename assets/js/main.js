@@ -277,4 +277,51 @@ typing-title
 
             typeNextChar();
         });
-    
+/*---------------------------------------------------------
+#partners Swiper
+--------------------------------------------------------*/
+var mySwiper = new Swiper('.partnersSwiper', {
+    loop: true,
+    speed: 17000, 
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false, 
+    },
+    slidesPerView: 4,
+    spaceBetween: 50,
+    allowTouchMove: false, 
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        992: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+        },
+    },
+});
+
+mySwiper.on('resize', function () {
+    mySwiper.autoplay.stop();
+    mySwiper.autoplay.start();
+});
+const swiperContainer = document.querySelector('.partnersSwiper');
+
+swiperContainer.addEventListener('mouseenter', () => {
+    mySwiper.autoplay.stop();
+});
+
+swiperContainer.addEventListener('mouseleave', () => {
+    mySwiper.autoplay.start();
+});
+
+document.querySelector('.partnersSwiper .swiper-wrapper').style.transitionTimingFunction = 'linear';

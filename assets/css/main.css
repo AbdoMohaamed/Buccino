@@ -18,11 +18,11 @@
     --btn-size: clamp(1.2rem, 2vw, 1.3rem);
     --p-size: clamp(1.1rem, 3.5vw, 1.25rem);
     /* Headings */
-    --title: clamp(1.2rem, 3.7vw, 1.5rem);
-    --sup-title: clamp(1.875rem, 3vw, 2rem);
-    --h1-size: clamp(2rem, 5vw, 3.9rem);
-    --h2-size: clamp(1.75rem, 4vw, 2.5rem);
-    --h3-size: clamp(1.5rem, 3vw, 2.25rem);
+    --title: clamp(1.1rem, 3.7vw, 1.5rem);
+    --sup-title: clamp(1.3rem, 3vw, 2rem);
+    --h1-size: clamp(1.7rem, 5vw, 3.9rem);
+    --h2-size: clamp(1.5rem, 4vw, 2.5rem);
+    --h3-size: clamp(1.4rem, 3vw, 2.25rem);
     --h4-size: clamp(1.25rem, 2.5vw, 1.75rem);
     --h5-size: clamp(1.1rem, 2vw, 1.3rem);
     --h6-size: clamp(1rem, 1.5vw, 1.25rem);
@@ -48,23 +48,6 @@
     border-block-end: 2px solid var(--base);
     display: inline-block;
 }
-
-    /*   .generic-title::after {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        right: 0;
-        height: 2px;
-        background-color: var(--base);
-        width: 0;
-        border-radius: 2px;
-        transition: width 0.8s ease;
-    }
-
-    .generic-title.active::after {
-        width: 100%;
-    }*/
-
     .generic-title .generic-title-icon {
         padding-left: 5px;
         width: 30px;
@@ -108,6 +91,13 @@
         .btn-custom:hover i {
             border: 1px solid var(--base);
         }
+@media only screen and (max-width: 786px)  {
+    .btn-custom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 /*--------------------------------------------------------------
 # home-section
@@ -123,7 +113,6 @@ body .findout-section {
 # Header
 --------------------------------------------------------------*/
 .header {
-    /* transition: all 0.5s; */
     z-index: 997;
     background-color: #FFFFFF;
 }
@@ -131,12 +120,9 @@ body .findout-section {
     .header.sticked {
         position: relative;
         top: 20px;
-        /*right: 0;
-        left: 0; */
         margin: 20px 0;
         height: 70px;
         max-width: 1400px;
-        /* margin: auto; */
         border-radius: 50px;
         padding: 12px 36px 12px 12px;
     }
@@ -170,32 +156,6 @@ body .findout-section {
     color: var(--hover);
     text-decoration: none;
 }
-
-.callus {
-    position: relative;
-    display: flex;
-}
-
-    .callus a {
-        height: 47px;
-        width: 113px;
-        color: var(--base);
-        border: 1px solid var(--base);
-        text-decoration: none;
-        border-radius: 30px;
-        line-height: 45px;
-        text-align: center;
-        font-family: var(--title-font-family);
-        font-size: var(--btn-size);
-        font-style: normal;
-        font-weight: 600;
-    }
-
-        .callus a:hover {
-            border: 1px solid var(--white);
-            background-color: var(--base);
-            color: var(--white);
-        }
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -235,7 +195,6 @@ body .findout-section {
             padding: 0 3px;
             font-family: var(--title-font-family);
             color: var(--hover);
-            /*transition: 0.3s;*/
             position: relative;
             font-size: var(--p-size);
             font-style: normal;
@@ -259,7 +218,6 @@ body .findout-section {
             background-color: var(--base);
             visibility: hidden;
             width: 0px;
-            /*transition: all 0.3s ease-in-out 0s;*/
         }
 
         .navbar a:hover:before,
@@ -288,7 +246,6 @@ body .findout-section {
             visibility: hidden;
             background: #fff;
             box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-            /*transition: 0.3s;*/
             border-radius: 4px;
         }
 
@@ -356,14 +313,6 @@ body .findout-section {
     .header.sticked {
         padding: 12px 0px 12px 12px;
     }
-
-    .navbar {
-        max-width: 300px !important;
-    }
-
-    .mobile-nav-hide {
-        right: 265px !important;
-    }
 }
 
 /*--------------------------------------------------------------
@@ -375,14 +324,13 @@ body .findout-section {
         top: 0;
         right: -100%;
         width: 100%;
-        max-width: 400px;
         bottom: 0;
-        /*transition: 0.3s;*/
         z-index: 9997;
     }
 
     .header.sticked {
         margin: 0px 0;
+        padding:15px;
     }
 
     .navbar ul {
@@ -392,12 +340,12 @@ body .findout-section {
         margin: 0;
         background: #FFF;
         overflow-x: auto;
-        /*transition: 0.3s;*/
         z-index: 9998;
     }
 
         .navbar ul li {
-            padding: 40px;
+            padding: 10px 20px;
+            border-bottom: 1px solid var(--base);
         }
 
     .navbar a,
@@ -449,7 +397,6 @@ body .findout-section {
         display: none;
         padding: 10px 0;
         margin: 10px 20px;
-        /*transition: all 0.5s ease-in-out;*/
         background-color: #007466;
         border: 1px solid #006459;
     }
@@ -464,20 +411,17 @@ body .findout-section {
         font-size: 28px;
         cursor: pointer;
         line-height: 0;
-        /*transition: 0.5s;*/
         z-index: 9999;
         margin-right: 10px;
     }
 
     .mobile-nav-hide {
-        color: red;
-        font-size: 32px;
+        color: var(--gray);
+        font-size: 28px;
         cursor: pointer;
         line-height: 0;
-        /*transition: 0.5s;*/
         position: fixed;
-        right: 350px;
-        top: 20px;
+        left:0px;
         z-index: 9999;
     }
 
@@ -493,17 +437,9 @@ body .findout-section {
                 content: "";
                 position: fixed;
                 inset: 0;
-                /* background: rgba(0, 106, 93, 0.8); */
                 z-index: 9996;
             }
 }
-
-/*@media only screen and (max-width : 1300px) {
-    .header .container {
-        flex-flow: row-reverse;
-    }
-}*/
-
 /*--------------------------------------------------------------
 # findout-info
 --------------------------------------------------------------*/
@@ -528,7 +464,7 @@ body .findout-section {
 }
 
 .findout-info h3 {
-    color: var(--base-2);
+    color: var(--base);
     text-align: center;
     margin-bottom: 0px;
     border-radius: 6px;
@@ -595,6 +531,7 @@ body .findout-section {
         object-fit: cover;
         margin-left: -15px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
     }
 
         .clients-group .client.more {
@@ -621,8 +558,45 @@ body .findout-section {
         flex-flow: column;
         gap: 20px;
     }
+    .findout-info h2 {
+        text-align: center;
+    }
+
+    .findout-info .text-muted {
+        font-size: 1rem !important;
+    }
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .trusted-section {
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .clients-group {
+        width: 65%;
+        justify-content: center;
+    }
+        .clients-group img,
+        .clients-group .client {
+            width: 45px;
+            height: 45px;
+        }
+}
+
+@media (max-width: 480px) {
+    .clients-group img,
+    .clients-group .client {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clients-group {
+        gap: 6px;
+    }
+}
 /*--------------------------------------------------------------
 # Success partners
 --------------------------------------------------------------*/
@@ -660,7 +634,7 @@ body .findout-section {
             line-height: normal;
         }
 
-    .success-partners .partners-logo {
+    /*.success-partners .partners-logo {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -696,10 +670,40 @@ body .findout-section {
         flex-wrap: nowrap;
     }
 }
+*/
+.partnersSwiper {
+    background-color: var(--white);
+    border-radius: 57.917px;
+    padding: 18px 86px;
+}
+.partnersSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.partnersSwiper img {
+    width: auto;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+    .partnersSwiper img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.05);
+    }
 @media only screen and (max-width : 667px) {
+    .partnersSwiper {
+        padding: 18px 20px;
+    }
     .partners-logo .item h3 {
         display: none;
+    }
+    .success-partners .partners-info h2 {
+        font-size: var(--sup-title);
     }
 
     .success-partners .partners-logo {
@@ -1269,6 +1273,8 @@ body .findout-section {
 
     .exhibition-title-group .btn-exhibition {
         margin: auto;
+        width:100%;
+        justify-content:space-between;
     }
     .exhibition-title-group {
         padding-bottom:50px !important;
@@ -1280,7 +1286,7 @@ body .findout-section {
 
 @media (max-width: 661px) {
     .exhibition-title-group {
-        padding-bottom: 7px !important;
+        padding-bottom: 15px !important;
     }
 }
 
@@ -1289,7 +1295,7 @@ body .findout-section {
 --------------------------------------------------------------*/
 .choose-buccino {
     background: #FAF6F3;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 .challenges,
@@ -1409,7 +1415,10 @@ body .findout-section {
     font-style: normal;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
+    .choose-buccino {
+        padding-bottom: 150px;
+    }
     .about-section {
         grid-template-columns: 1fr;
     }
@@ -1421,6 +1430,8 @@ body .findout-section {
     .about-list::before {
         right: 50%;
     }
+ 
+
 }
 
 .choose-buccino .about-box {
@@ -1525,7 +1536,7 @@ body .findout-section {
 whats app  and client-opinion
 -----------------------------------------------------------*/
 .client-opinion {
-    padding: 60px 0;
+    padding-bottom: 60px;
     background: var(--white);
     font-family: var(--title-font-family);
     background-image: url(../images/contact-us-bg.jpg);
@@ -1965,7 +1976,6 @@ contact us
     font-weight: bold;
     text-transform: uppercase;
 }
-/* typical phone screen resolution */
 @media only screen and (max-width : 768px) {
     .footer {
         padding: 15px;
