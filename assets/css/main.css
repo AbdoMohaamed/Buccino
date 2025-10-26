@@ -421,7 +421,7 @@ body .findout-section {
         cursor: pointer;
         line-height: 0;
         position: fixed;
-        left:0px;
+        left:5px;
         z-index: 9999;
     }
 
@@ -1298,7 +1298,7 @@ body .findout-section {
     padding-bottom: 50px;
 }
 
-.challenges,
+/*.challenges,
 .choose-buccino-title .sub-title {
     color: var(--black);
     text-align: right;
@@ -1307,7 +1307,7 @@ body .findout-section {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
+}*/
 
 .choose-buccino-title p {
     color: #777;
@@ -1855,7 +1855,7 @@ contact us
 --------------------------------------------------------------*/
 .progress-wrap {
     position: fixed;
-    right: 50px;
+    left: 50px;
     bottom: 50px;
     height: 46px;
     width: 46px;
@@ -1879,8 +1879,9 @@ contact us
 
     .progress-wrap::after {
         position: absolute;
-        font-family: "boxicons";
-        content: "\ee2e";
+        font-family: "Font Awesome 5 Free";
+        content: "\f062";
+        font-weight: 900;
         text-align: center;
         line-height: 46px;
         font-size: 24px;
@@ -1902,8 +1903,9 @@ contact us
 
     .progress-wrap::before {
         position: absolute;
-        font-family: "boxicons";
-        content: "\ee2e";
+        font-family: "Font Awesome 5 Free";
+        content: "\f062";
+        font-weight:900;
         text-align: center;
         line-height: 46px;
         font-size: 24px;
@@ -1938,7 +1940,22 @@ contact us
         transition: all 200ms linear;
     }
 
-
+.fa-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display:grid;
+    align-items:center;
+}
 /*----------------------------------------------------------------
     #footer 
 ----------------------------------------------------------------*/
