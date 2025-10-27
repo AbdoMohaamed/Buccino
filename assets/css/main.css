@@ -1968,25 +1968,23 @@ contact us
     color: white;
 }
 
-.social-icons a i {
-    width: 30px;
+.social-icons a  {
     margin: 0 5px;
-    padding: 9px;
+    padding:8px;
     color: var(--white);
     border-radius: 5px;
+    background-color: var(--base);
 }
-
-.social-icons a:nth-child(1) i {
+.social-icons a:nth-child(1):hover  {
     background-color: #0866FF;
 }
 
-.social-icons a:nth-child(2) i {
-    background-color: black;
-}
-
-.social-icons a:nth-child(3) i {
-    background-color: var(--base);
-}
+    .social-icons a:nth-child(2):hover {
+        background-color: black;
+    }
+    .social-icons a:nth-child(3):hover {
+        background-color: var(--base);
+    }
 
 .brand-name {
     font-size: 24px;
