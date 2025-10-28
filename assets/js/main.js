@@ -265,48 +265,38 @@ typing-title
 /*---------------------------------------------------------
 #partners Swiper
 --------------------------------------------------------*/
-var mySwiper = new Swiper('.partnersSwiper', {
+new Swiper('.partners-slider', {
+    speed: 400,
     loop: true,
-    speed: 17000, 
     autoplay: {
-        delay: 0,
-        disableOnInteraction: false, 
+        delay: 5000,
+        disableOnInteraction: false
     },
-    slidesPerView: 4,
-    spaceBetween: 50,
-    allowTouchMove: false, 
+    slidesPerView: 'auto',
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
     breakpoints: {
         320: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 40
         },
-        576: {
+        480: {
             slidesPerView: 3,
-            spaceBetween: 25,
+            spaceBetween: 60
         },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+        640: {
+            slidesPerView: 4,
+            spaceBetween: 80
         },
         992: {
             slidesPerView: 6,
-            spaceBetween: 40,
-        },
-    },
+            spaceBetween: 120
+        }
+    }
 });
-
-mySwiper.on('resize', function () {
-    mySwiper.autoplay.stop();
-    mySwiper.autoplay.start();
-});
-const swiperContainer = document.querySelector('.partnersSwiper');
-
-swiperContainer.addEventListener('mouseenter', () => {
-    mySwiper.autoplay.stop();
-});
-
-swiperContainer.addEventListener('mouseleave', () => {
-    mySwiper.autoplay.start();
-});
-
-document.querySelector('.partnersSwiper .swiper-wrapper').style.transitionTimingFunction = 'linear';
+/*---------------------------------------------------
+#challenges section animation
+----------------------------------------------------*/
