@@ -1004,13 +1004,7 @@ body .findout-section {
                 border-radius: 10px;
             }
 
-    .challenges .challenges-container .challenges-image{
-        height:100%;
-    }
-    .challenges .challenges-container .challenges-image  svg{
-        height: 100%;
-        width:100%;
-    }
+
     .challenges .challenges-container .challenges-group .challenges-item p,
     .solutions-item p {
         color: var(--Dark-Gray);
@@ -1451,20 +1445,6 @@ body .findout-section {
         transform: translateX(-50%);
     }
 
-.choose-buccino .about-box .image svg path {
-    fill: none;
-    stroke: #8C5133;
-    stroke-width: 2;
-    stroke-dasharray: 1000;     
-    stroke-dashoffset: 1000;    
-    animation: draw 4s ease forwards;
-}
-
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0; 
-    }
-}
 
     .choose-buccino .about-box .about-container {
         position: relative;
