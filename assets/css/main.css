@@ -641,6 +641,7 @@ body .findout-section {
         padding: 18px 86px;
     }
 
+   
     .success-partners .swiper-slide img {
         transition: 0.3s;
     }
@@ -683,6 +684,13 @@ body .findout-section {
 
     .partners-logo .item {
         width: 150px;
+    }
+   
+}
+/* typical phone screen resolution */
+@media only screen and (max-width : 441px) {
+    .success-partners .swiper-slide {
+        margin-left: 10px !important;
     }
 }
 
@@ -1003,7 +1011,72 @@ body .findout-section {
                 gap: 10px;
                 border-radius: 10px;
             }
+.challenges-image path {
+    animation: hideshow 10s ease alternate infinite;
+    opacity: 0;
+}
 
+@keyframes hideshow {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.challenges-image path:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.challenges-image path:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.challenges-image path:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.challenges-image path:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.challenges-image path:nth-child(5) {
+    animation-delay: 3s;
+}
+
+.challenges-image path:nth-child(6) {
+    animation-delay: 3s;
+}
+
+.challenges-image path:nth-child(7) {
+    animation-delay: 3s;
+}
+
+.challenges-image path:nth-child(8) {
+    animation-delay: 0s;
+}
+
+.challenges-image path:nth-child(9) {
+    animation-delay: 0s;
+}
+
+.challenges-image path:nth-child(10) {
+    animation-delay: 3s;
+}
+
+.challenges-image path:nth-child(11) {
+    animation-delay: 0s;
+}
 
     .challenges .challenges-container .challenges-group .challenges-item p,
     .solutions-item p {
